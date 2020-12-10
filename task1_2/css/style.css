@@ -22,7 +22,7 @@ a
 
 .main_logo_text
 {
-    font: normal normal 34px/43px Crete Round;
+    font: normal normal 34px/43px "Crete Round";
     color: #060C31;
 }
 
@@ -40,7 +40,7 @@ a
 
 .main_title_text
 {
-    font: normal normal 58px/64px Crete Round;
+    font: normal normal 58px/64px "Crete Round";
     letter-spacing: 2.9px;
 }
 
