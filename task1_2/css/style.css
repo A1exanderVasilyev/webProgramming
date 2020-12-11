@@ -1,0 +1,102 @@
+a
+{
+    text-decoration: none;
+    font: normal bold 15px/0 "Lato";
+}
+
+.main_block
+{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main_content
+{
+    padding: 0 10px;
+}
+
+.main_logo
+{
+    margin-top: 60px;
+}
+
+.main_logo_text
+{
+    font: normal normal 34px/43px "Crete Round";
+    color: #060C31;
+}
+
+.main_img
+{
+    width: 717px;
+    height: 569px;
+}
+
+.main_title
+{
+    margin-top : 90px;
+    width: 590px;
+}
+
+.main_title_text
+{
+    font: normal normal 58px/64px "Crete Round";
+    letter-spacing: 2.9px;
+}
+
+.text_section
+{
+    margin-top: 36px;
+    width: 493px;
+    height: 84px;
+}
+
+.text
+{
+    font: normal normal 15px/28px "Lato";
+    letter-spacing: 0.75px;
+    color: #060C31;
+    width: 493px;
+    height: 84px;
+}
+
+.buttons
+{
+    margin-top: 48px;
+    margin-bottom: 20px;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+}
+
+.button
+{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 156px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.get_started_button
+{
+    margin-right: 20px;
+    background: #233FE2;
+}
+
+.get_started_button_text
+{
+    padding: 24px 36px;
+    color: #FFFFFF;
+}
+
+.create_account_button
+{
+    border: 1px solid #FFB0B1;
+}
+
+.create_account_button_text
+{
+    padding: 23px 24px;
+    color: #060C31;
+}
