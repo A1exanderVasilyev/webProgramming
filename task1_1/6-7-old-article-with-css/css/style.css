@@ -121,14 +121,14 @@ a:visited
     outline: none;
 }
 
-.article_mark
+.article_bold
 {
     font-weight: bold;
     font-family: 'Arial', sans-serif;
 }
 
-.system_name
+.text_selection
 {
     color: #fff;
-    background: orange;
+    background: tomato;
 }
