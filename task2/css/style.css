@@ -1,25 +1,54 @@
 a
 {
     text-decoration: none;
-    font: normal bold 15px/0 Lato;
+    font: normal bold 15px/0 "Lato";
+    color: #060C31;
 }
 
 .container
 {
     margin-top: 60px;
     margin-left: 88px;
+    width: 1400px;
 }
 
 header
 {
-    width: auto;
-    display: block;
-    background-color: aqua;
+    display: flex;
 }
 
-.menu
+.menu_block
 {
-    margin-right: 586px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    width: 700px;
+    height: 46px;
+}
+
+header .menu_block ul
+{
+    list-style: none;
+    display: flex;
+}
+
+header .menu_block ul li
+{
+    display: block;
+    padding-right: 40px;
+    font: normal bold 13px/28px "Lato";
+}
+
+.menu_button
+{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 156px;
+    height: 46px;
+    border-radius: 50px;
+    border: 1px solid #FFB0B1;
+    padding: 23px 24px;
+    color: #060C31;
 }
 
 .main_block
@@ -33,9 +62,15 @@ header
     padding: 0 10px;
 }
 
-.main_logo
+.clear
 {
-    margin-top: 60px;
+    clear: both;
+}
+
+section
+{
+    margin-left: 112px;
+    margin-top: 164px;
 }
 
 .main_logo_text
@@ -46,8 +81,10 @@ header
 
 .main_img
 {
-    width: 717px;
-    height: 569px;
+    float: right;
+    padding-left: 0px;
+    width: 800px;
+    height: 600px;
 }
 
 .main_title
@@ -59,28 +96,25 @@ header
 .main_title_text
 {
     font: normal normal 58px/64px "Crete Round";
-    letter-spacing: 2.9px;
 }
 
 .text_section
 {
-    margin-top: 36px;
-    width: 493px;
+    margin-top: 42px;
+    width: 430px;
     height: 84px;
 }
 
 .text
 {
-    font: normal normal 15px/28px Lato;
+    font: normal normal 15px/28px 'Lato';
     letter-spacing: 0.75px;
     color: #060C31;
-    width: 493px;
-    height: 84px;
 }
 
 .buttons
 {
-    margin-top: 48px;
+    margin-top: 77px;
     margin-bottom: 20px;
     display: inline-block;
     align-items: center;
@@ -89,6 +123,8 @@ header
 
 .button
 {
+    display: inline-block;
+    box-sizing: border-box;
     width: 156px;
     height: 50px;
     border-radius: 50px;
@@ -102,18 +138,32 @@ header
 
 .get_started_button_text
 {
-    padding: 16px 43px 16px 36px;
+    padding: 24px 36px;
     color: #FFFFFF;
 }
 
 .create_account_button
 {
     border: 1px solid #FFB0B1;
-    box-sizing: border-box;
 }
 
 .create_account_button_text
 {
-    padding: 16px 27px;
+    padding: 23px 24px;
     color: #060C31;
+}
+
+footer
+{
+    display: flex;
+    align-items: center;
+    margin-top: 110px;
+    margin-left: auto;
+    width: 900px;
+    height: 30px;
+}
+
+footer img
+{
+    padding-left: 80px;
 }
