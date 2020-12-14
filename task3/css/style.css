@@ -1,0 +1,133 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.main_block
+{
+    max-width:: 1920px;
+}
+
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    max-width: 1680px;
+    padding: 33px 120px 0 120px;
+    
+}
+
+.menu_block
+{
+    display: flex;
+    align-items: center;
+}
+
+.menu
+{
+    padding-right: 99px;
+}
+
+.menu_item
+{
+    font: 500 16px/20px 'Montserrat', sans-serif;
+    color: black;
+    text-decoration: none;
+    padding-left: 87px;
+}
+
+.enrollment_button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 600 16px/16px 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: #05090C;
+    border-radius: 4.59px;
+    height: 55px;
+}
+
+.header_button
+{
+    width: 247px;
+}
+
+.top_section
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: 799px;
+    width: 1595px;
+    margin-left: 178px;
+}
+
+.middle_title
+{
+    font: 500 48px/61px 'Montserrat', sans-serif;
+    color: #000000;
+}
+
+.text_section
+{
+    font: 400 26px/31.2px 'Roboto Condensed', sans-serif;
+    width: 545px;
+    height: 62px;
+    margin-top: 10px;
+    margin-bottom: 46px;
+}
+
+.dark_top_section
+{
+    background-color: #000000;
+    max-width: 1920px;
+}
+
+.dark_top_section_content
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 111px 381px 142px 360px;
+    height: 132px;
+}
+
+.dark_top_section_item
+{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    align-items: center;
+    font: 400 22px/26px 'Roboto Condensed', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.middle_section
+{
+    max-width: 1920px;
+}
+
+.middle_section_content
+{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 34px 272px 102px 297px;
+    height: 1245px;
+
+}
+
+.middle_section_item
+{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 50%;
+        width: 1350px;
+}
