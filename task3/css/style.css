@@ -6,7 +6,7 @@
 
 .main_block
 {
-    max-width:: 1920px;
+    max-width: 1920px;
 }
 
 .header
@@ -68,12 +68,6 @@
     margin-left: 178px;
 }
 
-.middle_title
-{
-    font: 500 48px/61px 'Montserrat', sans-serif;
-    color: #000000;
-}
-
 .text_section
 {
     font: 400 26px/31.2px 'Roboto Condensed', sans-serif;
@@ -129,5 +123,62 @@
     flex-flow: column wrap;
     justify-content: center;
     height: 50%;
-        width: 1350px;
+    width: 1350px;
+}
+
+.middle_title
+{
+    font: bold 48px/61px 'Montserrat', sans-serif;
+    color: #000000;
+}
+
+.middle_text_section
+{
+    font: 400 18px/24px 'Roboto Condensed', sans-serif;
+    padding-top: 24px;
+    max-width: 620px;
+}
+
+.grid_block
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    width: 1135px;
+    height: 530px;
+    margin: 137px 392px 173px 390px;
+}
+
+.grid
+{
+    width: 1135px;
+    height: 411px;
+    display: grid;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+}
+
+.grid_item
+{
+    width: 358px;
+    height: 190px;
+    background: #000000;
+    border-radius: 7.35723px;
+}
+
+.grid_content
+{
+    margin: 32px 33px 21px 39px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.grid_text
+{
+    padding-top: 20px;
+    font: 400 18px/21px 'Roboto Condensed', sans-serif;
+    color: white;
 }
