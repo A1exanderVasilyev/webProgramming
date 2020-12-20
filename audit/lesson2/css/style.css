@@ -1,0 +1,28 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.top_background
+{
+    background-image: url('../images/top_backgroud.jpg')
+}
+
+.header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.menu_item
+{
+    font: 600 16px/22px 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-left: 80px;
+}
