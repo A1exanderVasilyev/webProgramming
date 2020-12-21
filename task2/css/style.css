@@ -7,36 +7,29 @@ a
 
 .container
 {
-    margin-top: 60px;
-    margin-left: 88px;
-    width: 1400px;
+    
+    margin:60px auto;
+    width: 1500px;
 }
 
-header
+.menu
 {
-    display: flex;
+    display: block;
+    float: right;
+    margin-right: 80px;
 }
 
 .menu_block
 {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    width: 700px;
-    height: 46px;
+    display: inline-block;
 }
 
-header .menu_block ul
+.menu_item
 {
-    list-style: none;
-    display: flex;
-}
-
-header .menu_block ul li
-{
-    display: block;
+    display: inline-block;
+    font: normal bold 13px/28px 'Lato', sans-serif;
+    text-decoration: none;
     padding-right: 40px;
-    font: normal bold 13px/28px "Lato";
 }
 
 .menu_button
@@ -70,7 +63,13 @@ header .menu_block ul li
 section
 {
     margin-left: 112px;
-    margin-top: 164px;
+    margin-top: 73px;
+    margin-bottom: 109px;
+}
+
+.main_content
+{
+    float: left;
 }
 
 .main_logo_text
@@ -82,7 +81,6 @@ section
 .main_img
 {
     float: right;
-    padding-left: 0px;
     width: 800px;
     height: 600px;
 }
@@ -155,15 +153,13 @@ section
 
 footer
 {
-    display: flex;
-    align-items: center;
-    margin-top: 110px;
-    margin-left: auto;
-    width: 900px;
+    display: inline-block;
+    float: right;
+    margin-right: 88px;
     height: 30px;
 }
 
 footer img
 {
-    padding-left: 80px;
+    padding-left: 104px;
 }
