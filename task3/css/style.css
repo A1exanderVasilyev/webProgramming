@@ -112,9 +112,11 @@
     justify-content: space-around;
     align-content: center;
     align-items: center;
-    width: 330px;
+    width: 337px;
     text-align: center;
     color: white;
+    font: 400 22px/26px 'Roboto Condensed', sans-serif;
+
 }
 
 .warning_content
@@ -147,6 +149,7 @@
     font: 400 18px/24px 'Roboto Condensed', sans-serif;
     margin-top: 24px;
     max-width: 620px;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .grid_block
