@@ -116,7 +116,6 @@
     text-align: center;
     color: white;
     font: 400 22px/26px 'Roboto Condensed', sans-serif;
-
 }
 
 .warning_content
@@ -125,7 +124,6 @@
     flex-flow: row wrap;
     max-width: 1920px;
     height: 1245px;
-
 }
 
 .warning_content_item
