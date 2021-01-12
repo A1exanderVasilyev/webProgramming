@@ -57,10 +57,10 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    margin: auto;
     align-items: flex-start;
     height: 799px;
     width: 1595px;
-    margin-left: 178px;
 }
 
 .top_section_title
@@ -101,34 +101,38 @@
 {
     display: flex;
     justify-content: space-between;
-    padding: 111px 381px 142px 360px;
+    margin: auto;
     width: 1148px;
     height: 145px;
 }
 
 .dark_top_section_item
 {
-    width: 330px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 337px;
     text-align: center;
     color: white;
+    font: 400 22px/26px 'Roboto Condensed', sans-serif;
 }
 
-.middle_section_content
+.warning_content
 {
     display: flex;
     flex-flow: row wrap;
-    margin: 34px 272px 102px 297px;
     max-width: 1920px;
     height: 1245px;
-
 }
 
-.middle_section_item
+.warning_content_item
 {
     display: flex;
-    justify-content: space-between;
     flex-flow: column wrap;
     justify-content: center;
+    margin: auto;
     height: 50%;
     width: 1350px;
 }
@@ -144,6 +148,7 @@
     font: 400 18px/24px 'Roboto Condensed', sans-serif;
     margin-top: 24px;
     max-width: 620px;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .grid_block
@@ -154,7 +159,7 @@
     flex-flow: column wrap;
     width: 1200px;
     height: 530px;
-    margin: 137px 392px 173px 390px;
+    margin: 137px auto;
 }
 
 .grid_title
@@ -170,8 +175,8 @@
     display: grid;
     flex-flow: row wrap;
     justify-content: space-around;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 30px;
 }
 
@@ -233,6 +238,21 @@
     margin: 0 10px;
 }
 
+.select
+{
+    position: relative;
+}
+
+.select select
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(../images/form/select_arrow.png);
+    background-repeat: no-repeat;
+    background-position: top 50% right 29px;
+}
+
 .input_text
 {
     font: 500 18px/22px 'Montserrat', sans-serif;
@@ -280,11 +300,19 @@
     width: 22px;
     height: 22px;
     margin-left: 10px;
+    margin-right: 8px;
 }
 
 .agreement_checkbox:checked+label::before
 {
+
     background-color: #EE58B6;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+label
+{
+    cursor: pointer;
 }
 
 .checkbox_text
@@ -296,9 +324,11 @@
 
 .people
 {
+    max-width: 1920px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    align-content: center;
     margin-top: 126px;
 }
 
