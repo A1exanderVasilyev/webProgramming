@@ -40,23 +40,9 @@ body
 
 .top_background
 {
+    background-image: url('../images/top_backgroud.jpg');
     height: 977px;
     margin-bottom: 135px;
-}
-
-.middle_age_fon
-{
-    background: url('../images/fons/speaker_fon.png');
-}
-
-.old_age_fon
-{
-    background: url('../images/fons/header_fon.png');
-}
-
-.young_age_fon
-{
-    background: url('../images/fons/programmer_fon.png');
 }
 
 .header
