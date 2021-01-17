@@ -503,3 +503,23 @@ label
     font: bold 31px/38px 'Montserrat', sans-serif;
     color: #FFFFFF;
 }
+
+@media screen and (max-width: 1366px)
+{
+    
+}
+
+@media screen and (max-width: 1024px)
+{
+    
+}
+
+@media screen and (max-width: 768px)
+{
+    
+}
+
+@media screen and (max-width: 480px)
+{
+    
+}
