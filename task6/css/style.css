@@ -6,20 +6,22 @@
 
 .main_block
 {
-    max-width: 1920px;
+    width: 100%;
 }
 
 img
 {
+    display: block;
     max-width: 100%;
+    height: auto;
 }
 
 .header
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    max-width: 1680px;
+    width: 100%;
     padding-top: 33px;
     margin: 0 auto;
     opacity: 0;
@@ -45,6 +47,45 @@ img
     padding-left: 87px;
 }
 
+.menu_burger
+{
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 20px;
+}
+
+.menu_burger span
+{
+    position: absolute;
+    background-color: #EE58B6;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 9px;
+}
+
+.menu_burger::before,
+.menu_burger::after
+{
+    content: '';
+    background-color: #EE58B6;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+}
+
+.menu_burger::before
+{
+    top: 0;
+}
+
+.menu_burger::after
+{
+    bottom: 0;
+}
+
 .enrollment_button
 {
     display: flex;
@@ -67,12 +108,12 @@ img
 .top_section
 {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row nowrap;
     justify-content: center;
     margin: auto;
-    align-items: flex-start;
-    height: 799px;
-    max-width: 1595px;
+    align-items: center;
+    height: auto;
+    width: 100%;
 }
 
 .top_section_text
@@ -88,6 +129,7 @@ img
     opacity: 0;
     transform: translateY(100px) scale(0.95);
     transition: all 0.3s ease-out 0.4s;
+    width: 762px;
 }
 
 .loaded .top_section_text
@@ -130,7 +172,7 @@ img
 .dark_top_section
 {
     background-color: #000000;
-    max-width: 1920px;
+    width: 100%;
     height: 398px;
     display: flex;
     align-items: center;
@@ -155,11 +197,11 @@ img
 .dark_top_section_item
 {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-content: center;
     align-items: center;
-    width: 337px;
+    width: 30%;
     text-align: center;
     color: white;
     font: 400 22px/26px 'Roboto Condensed', sans-serif;
@@ -191,7 +233,7 @@ img
 {
     display: flex;
     flex-flow: row wrap;
-    max-width: 1920px;
+    width: 100%;
     height: 1245px;
 }
 
@@ -277,7 +319,7 @@ img
     align-items: center;
     justify-content: space-between;
     flex-flow: column wrap;
-    max-width: 1200px;
+    width: 100%;
     height: 530px;
     margin: 137px auto;
 }
@@ -304,10 +346,10 @@ img
 {
     display: flex;
     flex-flow: row wrap;
-    width: 286px;
+    width: 284px;
     height: 126px;
     background: #000000;
-    border-radius: 7.35723px;
+    border-radius: 7px;
     padding: 32px 30px 36px 39px;
 }
 
@@ -315,7 +357,10 @@ img
 {
     padding-top: 20px;
     width: 286px;
-    font: 400 18px/21px 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'Roboto Condensed';
+    font-weight: normal;
     color: white;
 }
 
@@ -324,9 +369,10 @@ img
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
-    max-width: 1920px;
-    height: 694px;
+    width: 100%;
+    height: auto;
     background: #000000;
+    padding-bottom: 125px;
 }
 
 .dark_bottom_title
@@ -342,8 +388,9 @@ img
     display: flex;
     flex-flow: row wrap;
     margin-top: 80px;
-    max-width: 1440px;
-    height: 103px;
+    max-width: 1420px;
+    height: auto;
+    align-items: center;
 }
 
 .form_input
@@ -355,7 +402,7 @@ img
     border: 1.34888px solid #C0C0C0;
     box-sizing: border-box;
     border-radius: 4px;
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 .select
@@ -386,7 +433,7 @@ img
     font: 600 18px/22px 'Montserrat', sans-serif;
     color: white;
     background-color: #05090C;
-    width: 340px;
+    width: 20%;
     height: 64px;
     margin-left: 10px;
     border: 2px solid #FFFFFF;
@@ -419,7 +466,6 @@ img
     border-radius: 4.04665px;
     width: 22px;
     height: 22px;
-    margin-left: 10px;
     margin-right: 8px;
 }
 
@@ -433,6 +479,7 @@ img
 label
 {
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .checkbox_text
@@ -444,7 +491,7 @@ label
 
 .people
 {
-    max-width: 1920px;
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -495,7 +542,7 @@ label
     justify-content: center;
     background-color: #000000;
     height: 108px;
-    max-width: 1920px;
+    width: 100%;
 }
 
 .footer_title
@@ -504,18 +551,206 @@ label
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 1366px)
+@media screen and (max-width: 1440px)
 {
     
+    .form
+    {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 80px;
+        max-width: 1000px;
+        height: auto;
+        align-items: center;
+    }
+    
+    .form_input
+    {
+        width: 220px;
+    }
+    
+    .warning_content
+    {
+        margin: 0 auto;
+        height: 1000px;
+    }
+    
+    .warning_content_item
+    {
+        max-width: 1200px;
+        align-content: center;
+    }
+    
+    .warning_text.warning_time
+    {
+        max-width: 500px;
+    }
+    
+    .warning_img_finances
+    {
+        width: 500px;
+    }
+    
+    .warning_text.warning_deadline
+    {
+        max-width: 400px;
+    }
+    
+    .warning_img_mind_blowing
+    {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1366px)
+{
+    .warning_content_item
+    {
+        width: 1200px;
+    }
+    
+    .top_section
+    {
+        margin: 20px auto;
+        flex-flow: row wrap;
+    }
+    
+    .top_section_text
+    {
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 500px;
+    }
+    
+    .top_section_title
+    {
+        font: 600 70px/80px 'Montserrat', sans-serif;
+    }
+    
+    .enrollment_button top_section_button
+    {
+        align-self: center;
+    }
+
+}
+
+@media screen and (max-width: 1140px)
+{
+    .grid_block
+    {
+        display: flex;
+        align-items: center;
+        align-content: flex-start;
+        justify-content: flex-start;
+        flex-flow: column wrap;
+        max-width: 480px;
+        height: 1400px;
+        margin: 137px auto;
+    }
+    
+    .grid_title
+    {
+        text-align: center;
+    }
+    
+    .grid
+    {
+        width: auto;
+        flex-flow: column wrap;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        
+    }
 }
 
 @media screen and (max-width: 1024px)
 {
+    .menu
+    {
+        display: none;
+    }
     
+    .menu_burger
+    {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    
+    .warning_content
+    {
+        height: 1400px;
+    }
+    
+    .warning_content_item
+    {
+        text-align: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        width: 600px;
+    }
+    .form
+    {
+        flex-flow: column nowrap;
+        margin: 0 auto;
+        max-width: 320px;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .form_input
+    {
+        width: 320px;
+        margin: 10px 10px;
+    }
+    
+    .form_button
+    {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .label.checkbox_text
+    {
+        width: 400px;
+    }
 }
 
 @media screen and (max-width: 768px)
 {
+    .dark_top_section
+    {
+        height: 600px;
+    }
+    
+    .dark_top_section_content
+    {
+        width: 100%;
+        height: 500px;
+        flex-flow: column nowrap;
+    }
+    
+    .dark_top_section_item
+    {
+        width: 100%;
+        height: 500px;
+        flex-flow: column wrap;
+    }
+    
+    .form
+    {
+        flex-flow: column nowrap;
+        margin: 0 auto;
+        max-width: 320px;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .select
+    {
+        position: relative;
+    }
+    
     
 }
 
