@@ -203,5 +203,38 @@
 
 @media screen and (max-width: 480px)
 {
+    .top_section_title
+    {
+        font: 600 50px/60px 'Montserrat', sans-serif;
+    }
     
+    .grid_block
+    {
+        margin-top: 30px;
+    }
+    
+    .grid_item
+    {
+        width: 200px;
+    }
+    
+    .dark_bottom_title
+    {
+        font: 500 30px/50px 'Montserrat', sans-serif;
+        color: #FFFFFF;
+        text-align: center;
+        padding-top: 50px;
+    }
+    
+    .form_input
+    {
+        width: 250px;
+        margin-bottom: 10px;
+    }
+    
+    .form_button
+    {
+        margin-left: 0;
+        width: 250px;
+    }
 }

@@ -159,7 +159,7 @@ img
 {
     font: 400 26px/31.2px 'Roboto Condensed', sans-serif;
     max-width: 545px;
-    height: 62px;
+    height: auto;
     margin-top: 10px;
     margin-bottom: 46px;
 }
