@@ -159,7 +159,8 @@
     
     .label.checkbox_text
     {
-        width: 400px;
+        
+        max-width: 100%;
     }
 }
 
