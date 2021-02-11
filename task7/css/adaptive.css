@@ -1,0 +1,243 @@
+@media screen and (max-width: 1440px)
+{
+    
+    .form
+    {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 80px;
+        max-width: 1000px;
+        height: auto;
+        align-items: center;
+    }
+    
+    .form_input
+    {
+        width: 220px;
+    }
+    
+    .warning_content
+    {
+        margin: 0 auto;
+        height: 1000px;
+    }
+    
+    .warning_content_item
+    {
+        max-width: 1200px;
+        align-content: center;
+    }
+    
+    .warning_text.warning_time
+    {
+        max-width: 500px;
+    }
+    
+    .warning_img_finances
+    {
+        width: 500px;
+    }
+    
+    .warning_text.warning_deadline
+    {
+        max-width: 400px;
+    }
+    
+    .warning_img_mind_blowing
+    {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1366px)
+{
+    .warning_content_item
+    {
+        width: 1200px;
+    }
+    
+    .top_section
+    {
+        margin: 20px auto;
+        flex-flow: row wrap;
+    }
+    
+    .top_section_text
+    {
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 500px;
+    }
+    
+    .top_section_title
+    {
+        font: 600 70px/80px 'Montserrat', sans-serif;
+    }
+    
+    .enrollment_button top_section_button
+    {
+        align-self: center;
+    }
+
+}
+
+@media screen and (max-width: 1140px)
+{
+    .grid_block
+    {
+        display: flex;
+        align-items: center;
+        align-content: flex-start;
+        justify-content: flex-start;
+        flex-flow: column wrap;
+        max-width: 480px;
+        height: 1400px;
+        margin: 137px auto;
+    }
+    
+    .grid_title
+    {
+        text-align: center;
+    }
+    
+    .grid
+    {
+        width: auto;
+        flex-flow: column wrap;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        
+    }
+}
+
+@media screen and (max-width: 1024px)
+{
+    .menu
+    {
+        display: none;
+    }
+    
+    .menu_burger
+    {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    
+    .warning_content
+    {
+        height: 1400px;
+    }
+    
+    .warning_content_item
+    {
+        text-align: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        width: 600px;
+    }
+    .form
+    {
+        flex-flow: column nowrap;
+        margin: 0 auto;
+        max-width: 320px;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .form_input
+    {
+        width: 320px;
+        margin: 10px 10px;
+    }
+    
+    .form_button
+    {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .label.checkbox_text
+    {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .dark_top_section
+    {
+        height: 600px;
+    }
+    
+    .dark_top_section_content
+    {
+        width: 100%;
+        height: 500px;
+        flex-flow: column nowrap;
+    }
+    
+    .dark_top_section_item
+    {
+        width: 100%;
+        height: 500px;
+        flex-flow: column wrap;
+    }
+    
+    .form
+    {
+        flex-flow: column nowrap;
+        margin: 0 auto;
+        max-width: 320px;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .select
+    {
+        position: relative;
+    }
+    
+    .accordion_container
+    {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    .top_section_title
+    {
+        font: 600 50px/60px 'Montserrat', sans-serif;
+    }
+    
+    .grid_block
+    {
+        margin-top: 30px;
+    }
+    
+    .grid_item
+    {
+        width: 200px;
+    }
+    
+    .dark_bottom_title
+    {
+        font: 500 30px/50px 'Montserrat', sans-serif;
+        color: #FFFFFF;
+        text-align: center;
+        padding-top: 50px;
+    }
+    
+    .form_input
+    {
+        width: 250px;
+        margin-bottom: 10px;
+    }
+    
+    .form_button
+    {
+        margin-left: 0;
+        width: 250px;
+    }
+}
