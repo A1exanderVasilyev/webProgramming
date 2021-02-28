@@ -51,6 +51,7 @@
 
 @media screen and (max-width: 1366px)
 {
+    
     .warning_content_item
     {
         width: 1200px;
@@ -59,7 +60,7 @@
     .top_section
     {
         margin: 20px auto;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
     }
     
     .top_section_text
@@ -74,6 +75,11 @@
         font: 600 70px/80px 'Montserrat', sans-serif;
     }
     
+    .top_section_img
+    {
+        width: 500px;
+    }
+    
     .enrollment_button top_section_button
     {
         align-self: center;
@@ -83,6 +89,11 @@
 
 @media screen and (max-width: 1140px)
 {
+    .header
+    {
+        padding: 33px 10px;
+    }
+    
     .grid_block
     {
         display: flex;
@@ -98,6 +109,7 @@
     .grid_title
     {
         text-align: center;
+        margin-bottom: 40px;
     }
     
     .grid
@@ -106,7 +118,12 @@
         flex-flow: column wrap;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, 1fr);
-        
+    }
+    
+    .dark_bottom_title
+    {
+        margin-bottom: 40px;
+        padding-top: 50px;
     }
 }
 
@@ -124,9 +141,16 @@
         margin-right: 20px;
     }
     
+    .top_section
+    {
+        margin: 30px auto;
+        flex-flow: row wrap;
+    }
+    
     .warning_content
     {
         height: 1400px;
+        margin: 10px 0;
     }
     
     .warning_content_item
@@ -136,6 +160,22 @@
         flex-flow: column nowrap;
         width: 600px;
     }
+    
+    .middle_title
+    {
+        order: 0;
+    }
+    
+    .middle_text_section
+    {
+        order: 1;
+    }
+    
+    .warning_img_finances
+    {
+        order: 3;
+    }
+    
     .form
     {
         flex-flow: column nowrap;
@@ -153,8 +193,10 @@
     
     .form_button
     {
+        margin-top: 20px;
         margin-left: 0;
         width: 100%;
+        order: 2;
     }
     
     .label.checkbox_text
