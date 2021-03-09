@@ -134,6 +134,11 @@ img
     transition: .25s ease-in-out;
 }
 
+.menu_burger.hidden
+{
+    opacity: 0;
+}
+
 .enrollment_button
 {
     display: flex;
