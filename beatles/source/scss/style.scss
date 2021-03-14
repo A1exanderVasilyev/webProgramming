@@ -1,0 +1,281 @@
+*{padding: 0; margin: 0;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+html,body{height: 100%;max-width: 1920px;font-size: 100%;}
+button{cursor: pointer;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{background-repeat: no-repeat;}
+
+.button__text{
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF; 
+}
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 53px;
+    color: #404040;
+    padding-bottom: 18px;
+}
+.sub__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 26px;
+    color: #000000;
+    margin: 36px 0 16px 0;
+}
+.text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+/* head */
+.logo{
+    height: 50px;
+    cursor: pointer;
+}  
+.head{
+    //! УБРАТЬ sass --watch source/scss/style.scss:source/css/style.css 
+    //! 
+    max-height: 928px;
+    display: block;
+    justify-content: space-between;
+    margin: 0 184px;
+    .header__wrapper{
+        max-height: 136px;
+        padding-top: 75px;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        width: 100%;
+        .header__menu{
+            max-height: 50px;
+            display: flex;
+            align-content: center;
+    
+            .header__menu--list{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                
+                .header__link{
+                    display: flex;
+                    padding-left: 60px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 20px;
+                    color: #000000;
+                    text-align: center;
+                }
+            }
+        }
+    }
+                
+}
+.header__border{
+    margin-top: 38px;
+    
+}
+
+/* head */
+
+/* intro_wrapper */
+
+.intro__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    .intro__block {
+        margin: 124px 184px 87px;
+        
+        .intro__title {
+            font-family: 'Scada', sans-serif;
+            font-weight: 700;
+            font-size: 202px;
+            line-height: 190px;
+            color: #000000;
+            letter-spacing: 0.01em;
+            
+        }
+        .intro__offer {
+            display: flex;
+            flex-flow: row nowrap;
+            margin-top: 72px;
+            .intro__image{
+                max-width: 1024px;
+            }
+            .offer {
+                display: flex;
+                flex-flow: column nowrap;
+                margin: 74px 52px;
+                max-width: 365px;
+                .offer__button {
+                    margin-top: 32px;
+                    padding: 28px 57px;
+                    background: #000000;
+                    border: 1px solid #000000;
+                    box-sizing: border-box;
+                    color: #FFFFFF;
+                }
+            }
+            
+        }
+    }
+    
+}
+.about__block {
+    margin: 148px auto 68px;
+    max-width: 1288px;
+    
+}
+.about__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    color: #000000;
+}
+.about__grid {
+    max-width: 1112px;
+    margin-top: 68px;
+
+    .about__grid-item {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        .about__in-numbers {
+            .numbers {
+            font-family: 'Jura', sans-serif;
+            font-weight: 500;
+            font-size: 64px;
+            line-height: 76px;
+            color: #000000;
+        }
+        .numbers__text {
+            font-family: 'Jura', sans-serif;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            color: #000000;
+        }
+        }  
+    }
+}
+
+
+/* intro_wrapper */
+
+.secetion {
+    padding: 136px 184px 176px ;
+    background-color: #F1F1F1;
+}
+
+.courses__content {
+    padding-bottom: 91px;
+    font-family: 'Jura', sans-serif;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 76px;
+    color: #000000;
+    }
+
+    .coursers__border {
+        margin-bottom: 24px;
+    }
+    .courses__title {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    max-height: 1283px;
+    }
+    
+    .item__text-courses {
+    font-family: 'Jura', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 47px;
+    }
+    
+    .info__text-courses {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+    }
+    
+
+    .courses__block {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        flex-flow: ;
+        .courses-item {
+        }
+        .coursers__border {
+        }
+        .about__courses {
+            .courses__title {
+            }
+            .courses__text {
+            }
+        }
+        
+    }
+    
+
+    /* */
+    .start__stading-block {
+    width: 1920px;
+    height: 602px;
+    background-color: #000000;
+    .start__stading{
+        display: flex;
+        flex-flow: column nowrap;
+        .start__stading-title {
+            padding-top: 167px;
+            max-width: 988px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: 'Jura', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 64px;
+            line-height: 64px;
+            color: #FFFFFF;
+        }
+        .form__button {
+            background: #FFFFFF;
+            height: 80px;
+            margin: 60px auto;
+            width: 350px;
+            .form__button-text {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 24px;
+                color: #000000;
+                width: 235px;
+            }
+        }
+    }
+    }
+    .footer__courses {
+        margin: auto, 10px;
+    }
