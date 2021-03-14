@@ -1,58 +1,261 @@
-/*
-Error: Invalid CSS after "...    flex-flow: ": expected expression (e.g. 1px, bold), was ";"
-        on line 228 of source/scss/style.scss
+* {
+  padding: 0;
+  margin: 0; }
 
-223: 
-224:     .courses__block {
-225:         display: flex;
-226:         justify-content: space-between;
-227:         margin: 0 auto;
-228:         flex-flow: ;
-229:         .courses-item {
-230:         }
-231:         .coursers__border {
-232:         }
-233:         .about__courses {
+:focus, :active {
+  outline: none; }
 
-Backtrace:
-source/scss/style.scss:228
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in `expected!'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:855:in `assert_expr'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:68:in `parse'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1164:in `sass_script'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1002:in `value!'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:807:in `block in try_declaration'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...    flex-flow: \": expected expression (e.g. 1px, bold), was \";\"\A         on line 228 of source/scss/style.scss\A \A 223: \A 224:     .courses__block {\A 225:         display: flex;\A 226:         justify-content: space-between;\A 227:         margin: 0 auto;\A 228:         flex-flow: ;\A 229:         .courses-item {\A 230:         }\A 231:         .coursers__border {\A 232:         }\A 233:         .about__courses {"; }
+a:focus, a:active {
+  outline: none; }
+
+html, body {
+  height: 100%;
+  max-width: 1920px;
+  font-size: 100%; }
+
+button {
+  cursor: pointer; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  background-repeat: no-repeat; }
+
+.button__text {
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF; }
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 53px;
+  color: #404040;
+  padding-bottom: 18px; }
+
+.sub__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 26px;
+  color: #000000;
+  margin: 36px 0 16px 0; }
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000; }
+
+/* head */
+.logo {
+  height: 50px;
+  cursor: pointer; }
+
+.head {
+  max-height: 928px;
+  display: block;
+  justify-content: space-between;
+  margin: 0 184px; }
+  .head .header__wrapper {
+    max-height: 136px;
+    padding-top: 75px; }
+  .head .header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%; }
+    .head .header .header__menu {
+      max-height: 50px;
+      display: flex;
+      align-content: center; }
+      .head .header .header__menu .header__menu--list {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center; }
+        .head .header .header__menu .header__menu--list .header__link {
+          display: flex;
+          padding-left: 60px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 20px;
+          color: #000000;
+          text-align: center; }
+
+.header__border {
+  margin-top: 38px; }
+
+/* head */
+/* intro_wrapper */
+.intro__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap; }
+  .intro__wrapper .intro__block {
+    margin: 124px 184px 87px; }
+    .intro__wrapper .intro__block .intro__title {
+      font-family: 'Scada', sans-serif;
+      font-weight: 700;
+      font-size: 202px;
+      line-height: 190px;
+      color: #000000;
+      letter-spacing: 0.01em; }
+    .intro__wrapper .intro__block .intro__offer {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-top: 72px; }
+      .intro__wrapper .intro__block .intro__offer .intro__image {
+        max-width: 1024px; }
+      .intro__wrapper .intro__block .intro__offer .offer {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 74px 52px;
+        max-width: 365px; }
+        .intro__wrapper .intro__block .intro__offer .offer .offer__button {
+          margin-top: 32px;
+          padding: 28px 57px;
+          background: #000000;
+          border: 1px solid #000000;
+          box-sizing: border-box;
+          color: #FFFFFF;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 24px; }
+
+.about__block {
+  margin: 148px auto 68px;
+  max-width: 1288px; }
+
+.about__text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #000000; }
+
+.about__grid {
+  max-width: 1112px;
+  margin-top: 68px; }
+  .about__grid .about__grid-item {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr); }
+    .about__grid .about__grid-item .about__in-numbers .numbers {
+      font-family: 'Jura', sans-serif;
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 76px;
+      color: #000000; }
+    .about__grid .about__grid-item .about__in-numbers .numbers__text {
+      font-family: 'Jura', sans-serif;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000; }
+
+/* intro_wrapper */
+.secetion {
+  padding: 136px 184px 176px;
+  background-color: #F1F1F1; }
+
+.courses__content {
+  padding-bottom: 91px;
+  font-family: 'Jura', sans-serif;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 76px;
+  color: #000000; }
+
+.courses__border {
+  margin: 68px 184px 0;
+  padding-bottom: 24px; }
+
+.courses__block {
+  margin: 24px auto 0; }
+  .courses__block .courses-item {
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap; }
+  .courses__block .about__courses {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    width: auto;
+    margin-bottom: 68px; }
+    .courses__block .about__courses .courses__title {
+      font-family: 'Jura', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 47px;
+      color: #000000; }
+    .courses__block .about__courses .courses__text {
+      max-width: 760px;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 150%; }
+
+/* */
+.start__stading-block {
+  width: 1920px;
+  height: 602px;
+  background-color: #000000; }
+  .start__stading-block .start__stading {
+    display: flex;
+    flex-flow: column nowrap; }
+    .start__stading-block .start__stading .start__stading-title {
+      padding-top: 167px;
+      max-width: 988px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: 'Jura', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 64px;
+      line-height: 64px;
+      color: #FFFFFF; }
+    .start__stading-block .start__stading .form__button {
+      background: #FFFFFF;
+      height: 80px;
+      margin: 60px auto;
+      width: 350px; }
+      .start__stading-block .start__stading .form__button .form__button-text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+        width: 235px; }
+
+.footer__courses {
+  background: #F1F1F1;
+  height: 100px;
+  margin-bottom: 38px; }
+  .footer__courses .footer__text {
+    text-align: center;
+    padding-top: 38px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #464646; }
+
+/*# sourceMappingURL=style.css.map */

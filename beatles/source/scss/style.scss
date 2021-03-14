@@ -130,6 +130,11 @@ img{background-repeat: no-repeat;}
                     border: 1px solid #000000;
                     box-sizing: border-box;
                     color: #FFFFFF;
+                    font-family: Montserrat;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 15px;
+                        line-height: 24px;
                 }
             }
             
@@ -192,51 +197,42 @@ img{background-repeat: no-repeat;}
     line-height: 76px;
     color: #000000;
     }
-
-    .coursers__border {
-        margin-bottom: 24px;
-    }
-    .courses__title {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    max-height: 1283px;
-    }
     
-    .item__text-courses {
-    font-family: 'Jura', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 47px;
+    .courses__border {
+        margin: 68px 184px 0;
+        padding-bottom: 24px;
     }
-    
-    .info__text-courses {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 150%;
-    }
-    
-
     .courses__block {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto;
-        flex-flow: ;
+        margin: 24px auto 0;
         .courses-item {
-        }
-        .coursers__border {
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: column wrap;
         }
         .about__courses {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row nowrap;
+            width: auto;
+            margin-bottom: 68px;
             .courses__title {
+                font-family: 'Jura', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 47px;
+                color: #000000;   
             }
             .courses__text {
+                max-width: 760px;
+                font-family: 'Montserrat', sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 150%;
             }
         }
-        
     }
     
 
@@ -276,6 +272,17 @@ img{background-repeat: no-repeat;}
         }
     }
     }
-    .footer__courses {
-        margin: auto, 10px;
+.footer__courses {
+    background: #F1F1F1;
+    height: 100px;
+    margin-bottom: 38px;
+    .footer__text {
+        text-align: center;
+        padding-top: 38px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: #464646;
     }
+}
