@@ -1,178 +1,156 @@
 * {
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 :focus, :active {
-  outline: none;
-}
+  outline: none; }
 
 a:focus, a:active {
-  outline: none;
-}
+  outline: none; }
 
 html, body {
   height: 100%;
   max-width: 1920px;
-  font-size: 100%;
-}
+  font-size: 100%; }
 
 button {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 a, a:visited {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 a:hover {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 ul li {
-  list-style: none;
-}
+  list-style: none; }
 
 img {
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat; }
 
 .wrapper {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   min-width: 380px;
   padding: 26px 32px;
   font-family: Calibri,sans-serif;
   font-size: 18px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #ebebeb;
-}
+  background-color: #ebebeb; }
 
 .header {
   margin-bottom: 15px;
   background-color: inherit;
   background-image: none;
-  max-height: 115px;
-}
-
-.header .header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.header .header__container .header__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header .header__container .header__logo .logo {
-  max-height: 77px;
-  max-width: 77px;
-}
-
-.header .header__container .header__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  margin-left: 30px;
-}
-
-.header .header__container .header__title .header__title-h1 {
-  font-size: 29px;
-  font-family: "Segoe UI";
-  font-weight: lighter;
-  display: block;
-  text-transform: uppercase;
-  margin: 0;
-  color: #3f3f3f;
-  line-height: 1.7;
-}
-
-.header .header__container .header__title .header__title-h2 {
-  font-family: "Segoe UI" !important;
-  font-size: 20.833px !important;
-  color: #3f3f3f !important;
-  line-height: 1.7;
-  font-weight: normal !important;
-}
+  max-height: 115px; }
+  .header .header__container {
+    display: flex;
+    width: 100%; }
+    .header .header__container .header__logo {
+      display: flex;
+      align-items: center; }
+      .header .header__container .header__logo .logo {
+        max-height: 77px;
+        max-width: 77px; }
+    .header .header__container .header__title {
+      display: flex;
+      flex-flow: column nowrap;
+      margin-left: 30px; }
+      .header .header__container .header__title .header__title-h1 {
+        font-size: 29px;
+        font-family: "Segoe UI";
+        font-weight: lighter;
+        display: block;
+        text-transform: uppercase;
+        margin: 0;
+        color: #3f3f3f;
+        line-height: 1.7; }
+      .header .header__container .header__title .header__title-h2 {
+        font-family: "Segoe UI" !important;
+        font-size: 20.833px !important;
+        color: #3f3f3f !important;
+        line-height: 1.7;
+        font-weight: normal !important; }
 
 .main__block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   margin: 50px 32px;
-}
+  height: 100%; }
+  .main__block .main__block-menu {
+    max-height: 350px;
+    width: 300px;
+    padding: 0;
+    z-index: 1000;
+    background-color: #f9f9f9;
+    border-radius: 4px; }
+    .main__block .main__block-menu .organisation-name {
+      text-align: center;
+      background-color: #138145;
+      color: #f9f9f9;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      padding: 10px 30px; }
+    .main__block .main__block-menu .list-group {
+      margin-top: 10px; }
+      .main__block .main__block-menu .list-group .list-group-item {
+        position: relative;
+        display: block;
+        border: 0;
+        background: none;
+        border-radius: 0; }
+        .main__block .main__block-menu .list-group .list-group-item a {
+          display: inline-block;
+          width: 100%;
+          padding: 10px 15px;
+          color: #3e3e3e;
+          line-height: 1.2;
+          text-decoration: none; }
+        .main__block .main__block-menu .list-group .list-group-item:hover {
+          background-color: #138145; }
+          .main__block .main__block-menu .list-group .list-group-item:hover a {
+            color: #f9f9f9; }
+  .main__block .main__block-content {
+    margin-left: 20px;
+    width: 80%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 4px;
+    background-color: #f9f9f9; }
+  .main__block .content-title {
+    font-size: 30px;
+    margin-bottom: 20px; }
 
-.main__block .main__block-menu {
-  width: 300px;
-  padding: 0;
-  z-index: 1000;
-  background-color: #f9f9f9;
-  border-radius: 4px;
-}
+.facultie__table {
+  border-collapse: collapse;
+  table-layout: auto; }
+  .facultie__table thead tr {
+    font-weight: bold;
+    border-top: 1px solid #e8e9eb; }
+  .facultie__table tr {
+    height: 100%;
+    border-bottom: 1px solid #e8e9eb; }
+    .facultie__table tr .facultie__title {
+      vertical-align: baseline; }
+  .facultie__table td {
+    padding: 12px 16px; }
 
-.main__block .main__block-menu .organisation-name {
-  text-align: center;
-  background-color: #138145;
-  color: #f9f9f9;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.2;
-  padding: 10px 30px;
-}
+.specialities__table {
+  border-collapse: collapse;
+  table-layout: auto; }
+  .specialities__table thead tr {
+    font-weight: bold;
+    border-top: 1px solid #e8e9eb; }
+  .specialities__table tr {
+    height: 100%;
+    border-bottom: 1px solid #e8e9eb; }
+    .specialities__table tr .facultie__name {
+      text-align: center; }
+    .specialities__table tr .specialities__title {
+      vertical-align: baseline; }
+  .specialities__table td {
+    padding: 12px 16px; }
 
-.main__block .main__block-menu .list-group {
-  margin-top: 10px;
-}
-
-.main__block .main__block-menu .list-group .list-group-item {
-  position: relative;
-  display: block;
-  border: 0;
-  background: none;
-  border-radius: 0;
-}
-
-.main__block .main__block-menu .list-group .list-group-item a {
-  display: inline-block;
-  width: 100%;
-  padding: 10px 15px;
-  color: #3e3e3e;
-  line-height: 1.2;
-  text-decoration: none;
-}
-
-.main__block .main__block-menu .list-group .list-group-item:hover {
-  background-color: #138145;
-}
-
-.main__block .main__block-menu .list-group .list-group-item:hover a {
-  color: #f9f9f9;
-}
-
-.main__block .main__block-content {
-  margin-left: 20px;
-  width: 80%;
-  padding: 30px;
-  border-radius: 4px;
-  background-color: #f9f9f9;
-}
 /*# sourceMappingURL=style.css.map */
