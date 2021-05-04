@@ -1,0 +1,245 @@
+*{padding: 0; margin: 0;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+html,body{height: 100%;max-width: 1920px;font-size: 100%;}
+button{cursor: pointer;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{background-repeat: no-repeat;}
+
+//!sass --watch source/scss/style.scss:source/css/style.css
+
+//index.php styles
+.authorization__block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+}
+
+.authorization__form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 150px auto;
+    width: 400px;
+    a {
+        color: #138145;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    input {
+        margin: 10px 0;
+        padding: 10px;
+        border: unset;
+        border-bottom: 2px solid #e3e3e3;
+        outline: none;
+    }
+    button {
+        padding: 10px;
+        background: #138145;
+        border: unset;
+        cursor: pointer;
+        color: #ebebeb;
+        margin-bottom: 40px;
+    }
+}
+
+//
+
+//register.php styles
+.registration__block{
+    margin: 100px auto 50px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+}
+
+.registration__form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 400px;
+    a {
+        color: #138145;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    input {
+        margin: 10px 0;
+        padding: 10px;
+        border: unset;
+        border-bottom: 2px solid #e3e3e3;
+        outline: none;
+    }
+    button {
+        padding: 10px;
+        background: #138145;
+        border: unset;
+        cursor: pointer;
+        color: #ebebeb;
+        margin-bottom: 40px;
+    }
+}
+
+//
+
+.wrapper {
+    display: block;
+    box-sizing: content-box;
+    min-width: 380px;
+    padding: 26px 32px;
+    font-family: Calibri,sans-serif;
+    font-size: 18px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #ebebeb;
+}
+
+.header {
+    margin-bottom: 15px;
+    background-color: inherit;
+    background-image: none;
+    max-height: 115px;
+    .header__container {
+        display: flex;
+        width: 100%;
+        .header__logo {
+            display: flex;
+            align-items: center;
+            .logo {
+                max-height: 77px;
+                max-width: 77px;
+            }
+        }
+        .header__title {
+            display: flex;
+            flex-flow: column nowrap;
+            margin-left: 30px;
+            .header__title-h1{
+                font-size: 29px;
+                font-family: "Segoe UI";
+                font-weight: lighter;
+                display: block;
+                text-transform: uppercase;
+                margin: 0;
+                color: #3f3f3f;
+                line-height: 1.7;
+            }
+            .header__title-h2{
+                font-family: "Segoe UI"!important;
+                font-size: 20.833px!important;
+                color: #3f3f3f!important;
+                line-height: 1.7;
+                font-weight: normal!important;
+            }
+        }
+    }
+}
+
+.main__block {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 50px 32px;
+    height: 100%;
+    .main__block-menu {
+        max-height: 350px;
+        width: 300px;
+        padding: 0;
+        z-index: 1000;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+        .organisation-name {
+            text-align: center;
+            background-color: #138145;
+            color: #f9f9f9;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.2;
+            padding: 10px 30px;
+        }
+        .list-group {
+            margin-top: 10px;
+            .list-group-item {
+                position: relative;
+                display: block;
+                border: 0;
+                background: none;
+                border-radius: 0;
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    padding: 10px 15px;
+                    color: #3e3e3e;
+                    line-height: 1.2;
+                    text-decoration: none;
+                }
+                &:hover {
+                    background-color: #138145;
+                    a {
+                        color:#f9f9f9;
+                    }
+                }
+            }
+            
+        }
+    }
+    .main__block-content {
+        margin-left: 20px;
+        width: 80%;
+        height: 100%;
+        padding: 30px;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+    }
+    .content-title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+//table
+.facultie__table {
+    border-collapse: collapse;
+    table-layout: auto;
+    thead tr {
+        font-weight: bold; 
+        border-top: 1px solid #e8e9eb;
+    }
+    tr {
+        height: 100%;
+        border-bottom: 1px solid #e8e9eb;
+        .facultie__title {
+            vertical-align: baseline;
+        }
+    }
+    td {
+        padding: 12px 16px;
+    }
+}
+
+.specialities__table {
+    border-collapse: collapse;
+    table-layout: auto;
+    thead tr {
+        font-weight: bold; 
+        border-top: 1px solid #e8e9eb;
+    }
+    tr {
+        height: 100%;
+        border-bottom: 1px solid #e8e9eb;
+        .facultie__name {
+            text-align: center;
+        }
+        .specialities__title {
+            vertical-align: baseline;
+        }
+    }
+    td {
+        padding: 12px 16px;
+    }
+}
