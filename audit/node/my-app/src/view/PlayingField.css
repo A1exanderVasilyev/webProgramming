@@ -1,0 +1,75 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    border: 1px solid white;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@keyframes showAnimation {
+    70% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.cell_with-show-animation {
+    animation: showAnimation 1000ms ease-out;
+}
+
+.cell::before {
+    font-size: 50pt;
+    color: white;
+}
+
+.cell_x::before {
+    content: "X";
+}
+
+.cell_0::before {
+    content: "0";
+}
+
+.cell::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+}
+
+.cell_row::after {
+    width: 100%;
+    height: 4px;
+}
+
+.cell_column::after {
+    width: 4px;
+    height: 100%;
+}
+
+.cell_diagonal1::after {
+    width: 4px;
+    height: 145%;
+    transform: rotate(-45deg);
+}
+
+.cell_diagonal2::after {
+    width: 4px;
+    height: 145%;
+    transform: rotate(45deg);
+}
