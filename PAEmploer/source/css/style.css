@@ -28,6 +28,22 @@ ul li {
 img {
   background-repeat: no-repeat; }
 
+.authorization__form {
+  display: flex;
+  flex-direction: column;
+  width: 400px; }
+  .authorization__form input {
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    border-bottom: 2px solid #e3e3e3;
+    outline: none; }
+  .authorization__form button {
+    padding: 10px;
+    background: #e3e3e3;
+    border: unset;
+    cursor: pointer; }
+
 .wrapper {
   box-sizing: content-box;
   min-width: 380px;

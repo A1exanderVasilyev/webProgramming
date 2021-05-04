@@ -10,6 +10,28 @@ img{background-repeat: no-repeat;}
 
 //!sass --watch source/scss/style.scss:source/css/style.css
 
+//index.php styles
+.authorization__form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    input {
+        margin: 10px 0;
+        padding: 10px;
+        border: unset;
+        border-bottom: 2px solid #e3e3e3;
+        outline: none;
+    }
+    button {
+        padding: 10px;
+        background: #e3e3e3;
+        border: unset;
+        cursor: pointer;
+    }
+}
+
+//
+
 .wrapper {
     box-sizing: content-box;
     min-width: 380px;
