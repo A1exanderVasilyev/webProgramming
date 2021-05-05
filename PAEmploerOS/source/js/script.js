@@ -1,68 +1,112 @@
-window.addEventListener('load', function () {
-    headSlideBackground();
-});
+//
+//account/signin.php
+//
+/* 
+    Авторизация
+*/
 
-$(document).ready(function () {
-    $('.slider__content').slick({
-        infinite: true,
-        adaptiveHeight: true,
-        variableWidth: true,
+$('.login-button').click(function (e) {
+
+    e.preventDefault();
+    $(`input`).removeClass('validate-error');
+
+    let loginValue = $('input[name="login"]').val(),
+        passwordValue = $('input[name="password"]').val();
+
+    $.ajax({
+        url: 'account/signin.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            login: loginValue,
+            password: passwordValue,
+        },
+        success(data) {
+
+
+            if (data.status) {
+                document.location.href = '/profile.php';
+            } else {
+                if (data.type === 1) {
+                    data.fields.forEach(function (field) {
+                        $(`input[name="${field}"]`).addClass('validate-error');
+                    });
+                }
+                $('.msg').removeClass('hidden').text(data.message);
+            }
+
+
+        }
     });
+
+})
+
+
+/* 
+    Регистрация
+*/
+
+
+/* 
+    Получение документов с формы
+*/
+
+let docs = false;
+
+$('input[name="documents"]').change(function (e) {
+    docs = e.target.files[0];
+    console.log(docs);
 });
 
-function headSlideBackground() {
-    let headBlock = document.querySelector(".head");
-    let sliderButtons = document.querySelectorAll(".slider__button");
-    headBlock.classList.add('head__background-first');
-    sliderButtons[0].classList.add('active');
+
+$('.register-button').click(function (e) {
+
+    e.preventDefault();
+    $(`input`).removeClass('validate-error');
+
+    let organisationNameValue = $('input[name="organisation_name"]').val(),
+        organisationAdressValue = $('input[name="organisation_adress"]').val(),
+        organisationEmailValue = $('input[name="organisation_email"]').val(),
+        tinValue = $('input[name="tin"]').val(),
+        loginValue = $('input[name="login"]').val(),
+        passwordValue = $('input[name="password"]').val(),
+        passwordConfirmValue = $('input[name="password_confirm"]').val();
+
+    let formData = new FormData();
+    formData.append('organisation_name', organisationNameValue);
+    formData.append('organisation_adress', organisationAdressValue);
+    formData.append('organisation_email', organisationEmailValue);
+    formData.append('tin', tinValue);
+    formData.append('documents', docs);
+    formData.append('login', loginValue);
+    formData.append('password', passwordValue);
+    formData.append('password_confirm', passwordConfirmValue);
+
+    $.ajax({
+        url: 'account/signup.php',
+        type: 'POST',
+        dataType: 'json',
+        processData: false,
+        contentType: false,
+        cache: false,
+        data: formData,
+        success(data) {
 
 
+            if (data.status) {
+                document.location.href = '/index.php';
+            } else {
+                if (data.type === 1) {
+                    data.fields.forEach(function (field) {
+                        $(`input[name="${field}"]`).addClass('validate-error');
+                    });
+                }
 
-    let currentBackground = headBlock.querySelector(".head.active");
-    console.log(currentBackground);
-    /*     let currentAccordionText = document.querySelector(".accordion_block_text.active");
-        let accordionText = accordionHeader.nextElementSibling; */
+                $('.msg').removeClass('hidden').text(data.message);
+            }
 
-    sliderButtons[0].onclick = function () {
-        sliderButtons[1].classList.remove('active');
-        sliderButtons[2].classList.remove('active');
-        headBlock.classList.remove('head__background-third');
-        headBlock.classList.remove('head__background-second');
-        headBlock.classList.add('head__background-first');
-        this.classList.add('active');
-    };
-    sliderButtons[1].onclick = function () {
-        sliderButtons[0].classList.remove('active');
-        sliderButtons[2].classList.remove('active');
-        headBlock.classList.remove('head__background-first');
-        headBlock.classList.remove('head__background-third');
-        headBlock.classList.add('head__background-second');
-        this.classList.add('active');
-    };
-    sliderButtons[2].onclick = function () {
-        sliderButtons[1].classList.remove('active');
-        sliderButtons[0].classList.remove('active');
-        headBlock.classList.remove('head__background-first');
-        headBlock.classList.remove('head__background-second');
-        headBlock.classList.add('head__background-third');
-        this.classList.add('active');
-    };
 
-    /* 
-    currentActiveAccordionHeader.classList.toggle("active");
-    currentToggleIcon.classList.toggle("active");
-    currentAccordionText.classList.toggle("active");
-    currentActiveAccordionHeader.nextElementSibling.style.maxHeight = 0;
+        }
+    });
 
-    accordionHeader.classList.toggle("active");
-    console.log(toggleIcon);
-    toggleIcon.classList.toggle("active");
-    accordionText.classList.toggle("active");
-
-    if (accordionHeader.classList.contains("active")) {
-        accordionText.style.maxHeight = accordionText.scrollHeight + "px";
-    } else {
-        accordionText.style.maxHeight = 0;
-    } */
-
-}
+})

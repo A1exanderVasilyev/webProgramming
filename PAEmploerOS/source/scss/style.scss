@@ -7,7 +7,6 @@ a,a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{background-repeat: no-repeat;}
-
 //!sass --watch source/scss/style.scss:source/css/style.css
 
 //index.php styles
@@ -35,6 +34,10 @@ img{background-repeat: no-repeat;}
         border: unset;
         border-bottom: 2px solid #e3e3e3;
         outline: none;
+        &.validate-error {
+            border: 1px solid red;
+            z-index: 2;
+        }
     }
     button {
         padding: 10px;
@@ -62,7 +65,6 @@ img{background-repeat: no-repeat;}
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 400px;
     a {
         color: #138145;
         font-weight: bold;
@@ -74,6 +76,10 @@ img{background-repeat: no-repeat;}
         border: unset;
         border-bottom: 2px solid #e3e3e3;
         outline: none;
+        &.validate-error {
+            border: 1px solid red;
+            z-index: 2;
+        }
     }
     button {
         padding: 10px;
@@ -85,6 +91,18 @@ img{background-repeat: no-repeat;}
     }
 }
 
+.msg {
+    border: 2px solid #138145;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    &.hidden{display: none;}
+}
+
+.registration__invite {
+    margin-bottom: 30px;
+}
 //
 
 .wrapper {
@@ -97,6 +115,9 @@ img{background-repeat: no-repeat;}
     line-height: 1.42857143;
     color: #333;
     background-color: #ebebeb;
+    &.profile__page{
+        height: 100%;
+    }
 }
 
 .header {
@@ -145,7 +166,6 @@ img{background-repeat: no-repeat;}
     flex-flow: row nowrap;
     justify-content: space-between;
     margin: 50px 32px;
-    height: 100%;
     .main__block-menu {
         max-height: 350px;
         width: 300px;

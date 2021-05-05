@@ -50,6 +50,9 @@ img {
     border: unset;
     border-bottom: 2px solid #e3e3e3;
     outline: none; }
+    .authorization__form input.validate-error {
+      border: 1px solid red;
+      z-index: 2; }
   .authorization__form button {
     padding: 10px;
     background: #138145;
@@ -69,8 +72,7 @@ img {
 .registration__form {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  width: 400px; }
+  align-content: center; }
   .registration__form a {
     color: #138145;
     font-weight: bold;
@@ -81,6 +83,9 @@ img {
     border: unset;
     border-bottom: 2px solid #e3e3e3;
     outline: none; }
+    .registration__form input.validate-error {
+      border: 1px solid red;
+      z-index: 2; }
   .registration__form button {
     padding: 10px;
     background: #138145;
@@ -88,6 +93,18 @@ img {
     cursor: pointer;
     color: #ebebeb;
     margin-bottom: 40px; }
+
+.msg {
+  border: 2px solid #138145;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold; }
+  .msg.hidden {
+    display: none; }
+
+.registration__invite {
+  margin-bottom: 30px; }
 
 .wrapper {
   display: block;
@@ -99,6 +116,8 @@ img {
   line-height: 1.42857143;
   color: #333;
   background-color: #ebebeb; }
+  .wrapper.profile__page {
+    height: 100%; }
 
 .header {
   margin-bottom: 15px;
@@ -138,8 +157,7 @@ img {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin: 50px 32px;
-  height: 100%; }
+  margin: 50px 32px; }
   .main__block .main__block-menu {
     max-height: 350px;
     width: 300px;

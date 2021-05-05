@@ -1,8 +1,16 @@
+<?php
+session_start();
+if (!$_SESSION['user']) {
+    header('Location: /');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Личный кабинет работодателя</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -12,7 +20,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper profile__page">
         <header class="header">
             <div class="header__container">
                 <div class="header__logo">
@@ -28,22 +36,41 @@
 
         <div class="main__block">
             <div class="main__block-menu">
-                <div class="organisation-name">Васильев Александр Петрович</div>
-                <ul class="list-group">
-                    <li class="list-group-item"><a href="/">Моя страница</a></li>
-                    <li class="list-group-item"><a href="/faculties.html">Факультеты</a></li>
-                    <li class="list-group-item"><a href="/specialties.html">Специальности</a></li>
-                    <li class="list-group-item"><a href="/ratings.html">Рейтинг студентов</a>
-                    </li>
-                    <li class="list-group-item"><a href="/hiring.html">Заявка для найма</a></li>
-                    <li class="list-group-item"><a href="/Account/LogOff">Выйти</a></li>
-                </ul>
-                <script type="text/javascript">
+                <?php 
+                    if($_SESSION['user']['login'] !== 'admin') {
+                ?>
+                        <div class="organisation-name">
+                                <?= $_SESSION['user']['organisation_name'] ?>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="/">Моя страница</a></li>
+                            <li class="list-group-item"><a href="/faculties.html">Факультеты</a></li>
+                            <li class="list-group-item"><a href="/specialties.html">Специальности</a></li>
+                            <li class="list-group-item"><a href="/ratings.html">Рейтинг студентов</a>
+                            </li>
+                            <li class="list-group-item"><a href="/hiring.html">Заявка для найма</a></li>
+                            <li class="list-group-item"><a href="account/logout.php">Выйти</a></li>
+                        </ul>
+                <?php
+                    } else {
+                ?>
+                        <div class="organisation-name">Администратор</div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="/faculties.html">Организации</a></li>
+                            <li class="list-group-item"><a href="/specialties.html">Поступившие заявки</a></li>
+                            <li class="list-group-item"><a href="/ratings.html">Рассмотренные заявки</a></li>
+                            <li class="list-group-item"><a href="account/logout.php">Выйти</a></li>
+                        </ul>       
+                <?php
+                    }
+                ?>
+                
+                <!--<script type="text/javascript">
                     $(document).ready(function ($) {
                         $("a[href='/']").closest("li").addClass("selected-item");
 
                     });
-                </script>
+                </script> -->
             </div>
 
             <div class="main__block-content">
@@ -54,7 +81,7 @@
         <footer class="footer">
 
         </footer>
-
+        <script src="source/js/validate-form.js"></script>
     </div>
 </body>
 
