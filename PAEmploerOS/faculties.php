@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+if (!$_SESSION['user']) {
+    header('Location: /');
+}
+
+
+    require_once 'account/connect.php';
+
+    $faculties = mysqli_query($connect, "SELECT * FROM `faculties`");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +41,9 @@
 
         <div class="main__block">
             <div class="main__block-menu">
-                <div class="organisation-name">Васильев Александр Петрович</div>
+            <div class="organisation-name">
+                                <?= $_SESSION['user']['organisation_name'] ?>
+                        </div>
                 <ul class="list-group">
                     <li class="list-group-item"><a href="/">Моя страница</a></li>
                     <li class="list-group-item"><a href="/faculties.php">Факультеты</a></li>
@@ -36,7 +51,7 @@
                     <li class="list-group-item"><a href="/ratings.php">Рейтинг студентов</a>
                     </li>
                     <li class="list-group-item"><a href="/hiring.php">Заявка для найма</a></li>
-                    <li class="list-group-item"><a href="/Account/LogOff">Выйти</a></li>
+                    <li class="list-group-item"><a href="account/logout.php">Выйти</a></li>
                 </ul>
                 <script type="text/javascript">
                     $(document).ready(function ($) {
@@ -47,7 +62,26 @@
             </div>
 
             <div class="main__block-content">
-                <div class="suka">awdwa</div>
+                <div class="content-title">Факультеты</div>
+                <table class="facultie__table">
+                    <thead>
+                        <tr>
+                            <td>Наименование</td>
+                            <td>Описание</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <? while ($facultiy = mysqli_fetch_assoc($faculties)) {
+                    ?>
+                        <tr>
+                                <td class="facultie__title"><?php echo $facultiy['facultiy_name'] ?></td>
+                                <td><?php echo $facultiy['facultiy_description'] ?></td>              
+                        </tr>
+                    <?php
+                        } 
+                    ?>
+                    </tbody>
+                </table>
             </div>
         </div>
 

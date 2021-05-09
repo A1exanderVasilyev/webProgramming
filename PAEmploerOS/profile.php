@@ -44,11 +44,11 @@ if (!$_SESSION['user']) {
                         </div>
                         <ul class="list-group">
                             <li class="list-group-item"><a href="/">Моя страница</a></li>
-                            <li class="list-group-item"><a href="/faculties.html">Факультеты</a></li>
-                            <li class="list-group-item"><a href="/specialties.html">Специальности</a></li>
-                            <li class="list-group-item"><a href="/ratings.html">Рейтинг студентов</a>
+                            <li class="list-group-item"><a href="/faculties.php">Факультеты</a></li>
+                            <li class="list-group-item"><a href="/specialties.php">Специальности</a></li>
+                            <li class="list-group-item"><a href="/ratings.php">Рейтинг студентов</a>
                             </li>
-                            <li class="list-group-item"><a href="/hiring.html">Заявка для найма</a></li>
+                            <li class="list-group-item"><a href="/hiring.php">Заявка для найма</a></li>
                             <li class="list-group-item"><a href="account/logout.php">Выйти</a></li>
                         </ul>
                 <?php
@@ -56,9 +56,9 @@ if (!$_SESSION['user']) {
                 ?>
                         <div class="organisation-name">Администратор</div>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="/faculties.html">Организации</a></li>
-                            <li class="list-group-item"><a href="/specialties.html">Поступившие заявки</a></li>
-                            <li class="list-group-item"><a href="/ratings.html">Рассмотренные заявки</a></li>
+                            <li class="list-group-item"><a href="/faculties.php">Организации</a></li>
+                            <li class="list-group-item"><a href="/specialties.php">Поступившие заявки</a></li>
+                            <li class="list-group-item"><a href="/ratings.php">Рассмотренные заявки</a></li>
                             <li class="list-group-item"><a href="account/logout.php">Выйти</a></li>
                         </ul>       
                 <?php

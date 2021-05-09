@@ -83,7 +83,7 @@
 
         $password = md5($password);
 
-        $query = "INSERT INTO `users` (`id`, `organisation_name`, `organisation_adress`, `organisation_email`, `tin`, `login`, `password`, `documents`)
+        $query = "INSERT INTO `users` (`user_id`, `organisation_name`, `organisation_adress`, `organisation_email`, `tin`, `login`, `password`, `documents`)
         VALUES (NULL, '$organisation_name', '$organisation_adress', '$organisation_email', '$tin', '$login', '$password', '$path')";
 
         $result = mysqli_query($connect, $query) or die (mysqli_error($connect));
