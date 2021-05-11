@@ -110,3 +110,62 @@ $('.register-button').click(function (e) {
     });
 
 })
+
+/*
+    Зависимый список ratings.php
+*/
+
+$(document).ready(function () {
+    $("#faculty").change(function () {
+        let facultyVal = parseInt($("#faculty").val());
+        selectSpecialty(facultyVal);
+    });
+
+    $("#specialty").change(function () {
+        let specialtyVal = parseInt($("#specialty").val());
+        selectGroup(specialtyVal);
+    });
+});
+
+function selectSpecialty(facultyVal) {
+    let specialtyOption = $("#specialty");
+
+    $("#divspecialty,#divgroup").hide();
+    clear(specialtyOption);
+    clear($("#group"));
+
+    if (facultyVal > 0) {
+        $("#divspecialty").fadeIn("fast");
+        specialtyOption.attr("disabled", false);
+        specialtyOption.load(
+            "ratings.php",
+            {
+                facultyVal: facultyVal,
+            }
+        );
+    }
+}
+//
+
+function selectGroup(specialtyVal) {
+    let groupOption = $("#group");
+
+    $("#divgroup").hide();
+    clear(groupOption);
+
+    if (specialtyVal > 0) {
+        $("#divgroup").fadeIn("fast");
+        groupOption.attr("disabled", false);
+        groupOption.load(
+            "ratings.php",
+            {
+                specialtyVal: specialtyVal,
+            }
+        );
+    }
+}
+
+function clear(value) {
+    value.empty();
+    value.attr("disabled", true);
+}

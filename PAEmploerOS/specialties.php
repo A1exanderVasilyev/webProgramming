@@ -10,15 +10,15 @@ function vardump($var) {
     echo '<pre>';
     var_dump($var);
     echo '</pre>';
-  }
+}
     require_once 'account/connect.php';
 
-    $faculties = mysqli_query($connect, "SELECT * FROM `faculties`");
-    $specialties = mysqli_query($connect, "SELECT * FROM `specialties`");
+$faculties = mysqli_query($connect, "SELECT * FROM `faculties`");
+$specialties = mysqli_query($connect, "SELECT * FROM `specialties`");
 
-    while ($specialty = mysqli_fetch_assoc($specialties)) {
-        $specialtyPost[] = $specialty;
-    }
+while ($specialty = mysqli_fetch_assoc($specialties)) {
+    $specialtyPost[] = $specialty;
+}
     
 
 ?>
@@ -53,9 +53,9 @@ function vardump($var) {
 
         <div class="main__block">
             <div class="main__block-menu">
-            <div class="organisation-name">
+                <div class="organisation-name">
                                 <?= $_SESSION['user']['organisation_name'] ?>
-                        </div>
+                </div>
                 <ul class="list-group">
                     <li class="list-group-item"><a href="/">Моя страница</a></li>
                     <li class="list-group-item"><a href="/faculties.php">Факультеты</a></li>

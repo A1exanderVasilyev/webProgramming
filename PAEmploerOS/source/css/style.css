@@ -199,6 +199,21 @@ img {
     padding: 30px;
     border-radius: 4px;
     background-color: #f9f9f9; }
+    .main__block .main__block-content .rating-form__block {
+      display: flex; }
+      .main__block .main__block-content .rating-form__block .rating__form {
+        display: flex;
+        flex-flow: column nowrap; }
+        .main__block .main__block-content .rating-form__block .rating__form div {
+          margin-bottom: 20px; }
+        .main__block .main__block-content .rating-form__block .rating__form .specialty {
+          display: none; }
+        .main__block .main__block-content .rating-form__block .rating__form .group {
+          display: none; }
+        .main__block .main__block-content .rating-form__block .rating__form .raiting__button-submit {
+          max-width: 200px; }
+    .main__block .main__block-content .rating-table {
+      margin-top: 20px; }
   .main__block .content-title {
     font-size: 30px;
     margin-bottom: 20px; }
