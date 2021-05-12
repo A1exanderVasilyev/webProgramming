@@ -21,9 +21,7 @@ if($_POST['specialtyVal']) {
 if($_POST['submit']) {
     //echo "<pre>" . print_r($_POST, true) ."</pre>";
     $list = getList();
-    $q = is_array($list);
-    console.log($q);
-}
+} 
 
 $faculties = selectFaculty();
 
@@ -103,16 +101,25 @@ $faculties = selectFaculty();
                     </form>
                 </div>
                 <div class="rating-table">
-                    <? foreach($list as $names) {
-                    
-                    ?>
-                    <p><? echo $names['student_name'] ?></p><br>
-                    <?php
-                    }
-                    ?>
-                    
-
-                   
+                    <table BORDER>
+                        <tr>
+                            <td>Студент</td> <td>Факультет</td> <td>Специальность</td> <td>Группа</td> <td>Рейтинг(Средний балл)</td>
+                        </tr>
+                        <? 
+                        if(is_array($list)) {
+                            foreach($list as $names) {
+                            ?>
+                                <tr>
+                                    <td><p><? echo $names['student_name'] ?></p></td>
+                                    <td><p><? echo $names['facultiy_name'] ?></p></td>
+                                    <td><p><? echo $names['specialty_name'] ?></td></p>
+                                    <td><p><? echo $names['group_name'] ?></td></p>
+                                    <td><p><? echo $names['ROUND(AVG(student_performance.mark),1)'] ?></p></td>
+                                </tr>
+                           
+                            <?php }
+                        } ?>  
+                    </table>
                 </div>
             </div>
         </div>
