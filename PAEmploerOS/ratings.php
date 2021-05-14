@@ -103,7 +103,12 @@ $faculties = selectFaculty();
                 <div class="rating-table">
                     <table BORDER>
                         <tr>
-                            <td>Студент</td> <td>Факультет</td> <td>Специальность</td> <td>Группа</td> <td>Рейтинг(Средний балл)</td>
+                            <td>Студент</td> 
+                            <td>Факультет</td> 
+                            <td>Специальность</td> 
+                            <td>Группа</td> 
+                            <td>Рейтинг(Средний балл)</td>
+                            <td>Выбор студента для заявки</td>
                         </tr>
                         <? 
                         if(is_array($list)) {
@@ -115,8 +120,9 @@ $faculties = selectFaculty();
                                     <td><p><? echo $names['specialty_name'] ?></td></p>
                                     <td><p><? echo $names['group_name'] ?></td></p>
                                     <td><p><? echo $names['ROUND(AVG(student_performance.mark),1)'] ?></p></td>
+                                    <td><a href="hiring.php?student_id=<?= $names['student_id']?>&facultiy_name=<?= $names['facultiy_name']?>&group_name=<?= $names['group_name']?>&student_name=<?= $names['student_name']?>">Выбрать</a></form></td>
+                                    
                                 </tr>
-                           
                             <?php }
                         } ?>  
                     </table>

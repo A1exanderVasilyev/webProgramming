@@ -7,6 +7,7 @@ a,a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{background-repeat: no-repeat;}
+textarea{resize: none;}
 //!sass --watch source/scss/style.scss:source/css/style.css
 
 //index.php styles
@@ -205,7 +206,6 @@ img{background-repeat: no-repeat;}
                     }
                 }
             }
-            
         }
     }
     .main__block-content {
@@ -237,6 +237,49 @@ img{background-repeat: no-repeat;}
         }
         .rating-table {
             margin-top: 20px;
+        }
+    }
+    .hiring__block {
+        display: flex;
+        flex-flow: column nowrap;
+
+        .hiring__form {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            a {
+                color: #138145;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            input {
+                width: 300px;
+                margin: 10px 0;
+                padding: 10px;
+                border: unset;
+                border-bottom: 2px solid #e3e3e3;
+                outline: none;
+                &.validate-error {
+                    border: 1px solid red;
+                    z-index: 2;
+                }
+            }
+            .work-description {
+                textarea {
+                    overflow: auto;
+                    width: 500px;
+                    height: 300px;
+                }
+            }
+            .hiring__form-button {
+                padding: 10px;
+                max-width: 320px;
+                background: #138145;
+                border: unset;
+                cursor: pointer;
+                color: #ebebeb;
+                margin-bottom: 40px;
+            }
         }
     }
     .content-title {

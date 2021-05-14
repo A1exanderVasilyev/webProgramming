@@ -38,6 +38,7 @@
         $_SESSION['user'] = [
             "user_id" => $user['user_id'],
             "organisation_name" => $user['organisation_name'],
+            "organisation_email" => $user['organisation_email'],
             "login" => $user['login'],
         ];
 

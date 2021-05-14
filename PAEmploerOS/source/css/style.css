@@ -28,6 +28,9 @@ ul li {
 img {
   background-repeat: no-repeat; }
 
+textarea {
+  resize: none; }
+
 .authorization__block {
   display: flex;
   align-items: center;
@@ -214,6 +217,39 @@ img {
           max-width: 200px; }
     .main__block .main__block-content .rating-table {
       margin-top: 20px; }
+  .main__block .hiring__block {
+    display: flex;
+    flex-flow: column nowrap; }
+    .main__block .hiring__block .hiring__form {
+      display: flex;
+      flex-direction: column;
+      align-content: center; }
+      .main__block .hiring__block .hiring__form a {
+        color: #138145;
+        font-weight: bold;
+        text-decoration: none; }
+      .main__block .hiring__block .hiring__form input {
+        width: 300px;
+        margin: 10px 0;
+        padding: 10px;
+        border: unset;
+        border-bottom: 2px solid #e3e3e3;
+        outline: none; }
+        .main__block .hiring__block .hiring__form input.validate-error {
+          border: 1px solid red;
+          z-index: 2; }
+      .main__block .hiring__block .hiring__form .work-description textarea {
+        overflow: auto;
+        width: 500px;
+        height: 300px; }
+      .main__block .hiring__block .hiring__form .hiring__form-button {
+        padding: 10px;
+        max-width: 320px;
+        background: #138145;
+        border: unset;
+        cursor: pointer;
+        color: #ebebeb;
+        margin-bottom: 40px; }
   .main__block .content-title {
     font-size: 30px;
     margin-bottom: 20px; }
