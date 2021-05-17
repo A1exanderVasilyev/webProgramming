@@ -8,7 +8,9 @@ if (!$_SESSION['user']) {
 
     require_once 'account/connect.php';
 
-    $faculties = mysqli_query($connect, "SELECT * FROM `faculties`");
+    $id = $_GET['user_id'];
+    $contents = mysqli_query($connect, "SELECT * FROM `users` WHERE user_id='$id'");
+    
 ?>
 
 <!DOCTYPE html>
@@ -41,41 +43,39 @@ if (!$_SESSION['user']) {
 
         <div class="main__block">
             <div class="main__block-menu">
-                <div class="organisation-name">
-                                <?= $_SESSION['user']['organisation_name'] ?>
-                </div>
+                <div class="organisation-name">Администратор</div>
                 <ul class="list-group">
-                    <li class="list-group-item"><a href="/">Моя страница</a></li>
-                    <li class="list-group-item"><a href="/faculties.php">Факультеты</a></li>
-                    <li class="list-group-item"><a href="/specialties.php">Специальности</a></li>
-                    <li class="list-group-item"><a href="/ratings.php">Рейтинг студентов</a>
-                    </li>
-                    <li class="list-group-item"><a href="/hiring.php">Заявка для найма</a></li>
+                    <li class="list-group-item"><a href="/organisations.php">Организации</a></li>
+                    <li class="list-group-item"><a href="/application-list.php">Заявки</a></li>
                     <li class="list-group-item"><a href="account/logout.php">Выйти</a></li>
                 </ul>
-                <script type="text/javascript">
-                    $(document).ready(function ($) {
-                        $("a[href='/']").closest("li").addClass("selected-item");
-
-                    });
-                </script>
             </div>
 
             <div class="main__block-content">
-                <div class="content-title">Факультеты</div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <td>Наименование</td>
-                            <td>Описание</td>
-                        </tr>
-                    </thead>
+                <div class="content-title">Информация об организации</div>
+                <table class="table organisation__table">
                     <tbody>
-                    <? while ($facultiy = mysqli_fetch_assoc($faculties)) {
+                    <? while ($content = mysqli_fetch_assoc($contents)) {
                     ?>
                         <tr>
-                                <td class="facultie__title"><?php echo $facultiy['facultiy_name'] ?></td>
-                                <td><?php echo $facultiy['facultiy_description'] ?></td>              
+                            <td>Наименование организации</td>
+                            <td><?php echo $content['organisation_name'] ?></td> 
+                        </tr>
+                        <tr>
+                            <td>Адрес организации</td>
+                            <td><?php echo $content['organisation_adress'] ?></td> 
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><?php echo $content['organisation_email'] ?></td> 
+                        </tr>
+                        <tr>
+                            <td>ИНН</td>
+                            <td><?php echo $content['tin'] ?></td> 
+                        </tr>
+                        <tr>
+                            <td>Юридические документы</td>
+                            <td><img src="/<?= $content['documents'] ?>"></td> 
                         </tr>
                     <?php
                         } 
@@ -84,6 +84,11 @@ if (!$_SESSION['user']) {
                 </table>
             </div>
         </div>
+
+        <footer class="footer">
+
+        </footer>
+
     </div>
 </body>
 

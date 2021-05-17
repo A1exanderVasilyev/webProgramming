@@ -62,9 +62,6 @@
             </form>
         </div>
 
-        <footer class="footer">
-
-        </footer>
 
         <script src="/source/js/jquery-3.5.1.min.js"></script>
         <script src="/source/js/script.js"></script>

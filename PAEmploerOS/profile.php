@@ -43,7 +43,6 @@ if (!$_SESSION['user']) {
                                 <?= $_SESSION['user']['organisation_name'] ?>
                         </div>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="/">Моя страница</a></li>
                             <li class="list-group-item"><a href="/faculties.php">Факультеты</a></li>
                             <li class="list-group-item"><a href="/specialties.php">Специальности</a></li>
                             <li class="list-group-item"><a href="/ratings.php">Рейтинг студентов</a>
@@ -56,9 +55,8 @@ if (!$_SESSION['user']) {
                 ?>
                         <div class="organisation-name">Администратор</div>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="/faculties.php">Организации</a></li>
-                            <li class="list-group-item"><a href="/specialties.php">Поступившие заявки</a></li>
-                            <li class="list-group-item"><a href="/ratings.php">Рассмотренные заявки</a></li>
+                            <li class="list-group-item"><a href="/organisations.php">Организации</a></li>
+                            <li class="list-group-item"><a href="/application-list.php">Заявки</a></li>
                             <li class="list-group-item"><a href="account/logout.php">Выйти</a></li>
                         </ul>       
                 <?php
@@ -74,7 +72,7 @@ if (!$_SESSION['user']) {
             </div>
 
             <div class="main__block-content">
-                <div class="suka">awdwa</div>
+                
             </div>
         </div>
 

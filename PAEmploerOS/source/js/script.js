@@ -204,7 +204,7 @@ $('.hiring__form-button').click(function (e) {
 
             if (data.status) {
                 //document.location.href = '/hiring.php';
-                $('.msg').removeClass('hidden').text(data.message);
+                $('.msg-send').removeClass('hidden').text(data.message);
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {
@@ -212,7 +212,7 @@ $('.hiring__form-button').click(function (e) {
                         $(`textarea[name="${field}"]`).addClass('validate-error');
                     });
                 }
-                $('.msg').removeClass('hidden').text(data.message);
+                $('.msg-send').removeClass('hidden').text(data.message);
             }
         }
     });

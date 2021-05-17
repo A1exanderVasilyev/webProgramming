@@ -70,7 +70,7 @@ if($_POST['submit']) {
                     <form class="hiring__form" id="form"  method="POST" action="applications.php">
                         <input type="hidden" name="student_id" value="<?= $_GET['student_id']?>"> 
                         <label>Наименование организации</label>
-                            <input type="text" name="organisation_name" value="<?= $_SESSION['user']['organisation_name'] ?>" readonly>
+                            <input type="text" name="organisation_name" value='<?= $_SESSION['user']['organisation_name'] ?>' readonly>
                         <label>E-mail</label>
                             <input type="email" name="organisation_email" value="<?= $_SESSION['user']['organisation_email'] ?>" readonly>
                         <label>Факульет студента</label>
@@ -79,21 +79,16 @@ if($_POST['submit']) {
                             <input type="text" name="group_name" value="<?= $_GET['group_name'] ?>">
                         <label>ФИО студента</label>
                             <input type="text" name="student_name" value="<?= $_GET['student_name'] ?>">
-                        
                         <label>Описание предлагаемой работы</label>
                             <div class="work-description">
-                                <textarea  name="work_description" placeholder="Опишите предлагаемую работу" data-required="true"></textarea>
+                                <textarea  name="work_description" placeholder="Дайте подробное описание работы(должности)" data-required="true"></textarea>
                             </div>
                             <button type="submit" class="hiring__form-button">Отправить заявку</button>
                     </form>
-                    <p class="msg hidden">Lorem ipsum dolor sit amet.</p>
+                    <p class="msg-send hidden">Lorem ipsum dolor sit amet.</p>
                 </div>
             </div>
         </div>
-
-        <footer class="footer">
-
-        </footer>
 
     </div>
 

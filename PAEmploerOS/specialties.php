@@ -107,10 +107,6 @@ while ($specialty = mysqli_fetch_assoc($specialties)) {
             </div>
         </div>
 
-        <footer class="footer">
-
-        </footer>
-
     </div>
 </body>
 

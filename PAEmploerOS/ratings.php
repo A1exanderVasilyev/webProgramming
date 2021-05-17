@@ -121,7 +121,6 @@ $faculties = selectFaculty();
                                     <td><p><? echo $names['group_name'] ?></td></p>
                                     <td><p><? echo $names['ROUND(AVG(student_performance.mark),1)'] ?></p></td>
                                     <td><a href="hiring.php?student_id=<?= $names['student_id']?>&facultiy_name=<?= $names['facultiy_name']?>&group_name=<?= $names['group_name']?>&student_name=<?= $names['student_name']?>">Выбрать</a></form></td>
-                                    
                                 </tr>
                             <?php }
                         } ?>  
@@ -130,9 +129,6 @@ $faculties = selectFaculty();
             </div>
         </div>
 
-        <footer class="footer">
-
-        </footer>
         <script src="/source/js/jquery-3.5.1.min.js"></script>
         <script src="/source/js/script.js"></script>
     </div>

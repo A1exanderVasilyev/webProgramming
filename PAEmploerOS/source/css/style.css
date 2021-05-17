@@ -11,7 +11,8 @@ a:focus, a:active {
 html, body {
   height: 100%;
   max-width: 1920px;
-  font-size: 100%; }
+  font-size: 100%;
+  background-color: #ebebeb; }
 
 button {
   cursor: pointer; }
@@ -98,12 +99,22 @@ textarea {
     margin-bottom: 40px; }
 
 .msg {
-  border: 2px solid #138145;
+  border: 2px solid red;
   border-radius: 3px;
   padding: 10px;
   text-align: center;
   font-weight: bold; }
   .msg.hidden {
+    display: none; }
+
+.msg-send {
+  border: 2px solid #138145;
+  max-width: 500px;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold; }
+  .msg-send.hidden {
     display: none; }
 
 .registration__invite {
@@ -239,9 +250,18 @@ textarea {
           border: 1px solid red;
           z-index: 2; }
       .main__block .hiring__block .hiring__form .work-description textarea {
-        overflow: auto;
+        width: 20%;
+        height: 300px;
         width: 500px;
-        height: 300px; }
+        padding: 16px;
+        box-sizing: border-box;
+        border-radius: 2px;
+        font-size: 16px;
+        border: 1px lightgray solid;
+        resize: none; }
+        .main__block .hiring__block .hiring__form .work-description textarea.validate-error {
+          border: 1px solid red;
+          z-index: 2; }
       .main__block .hiring__block .hiring__form .hiring__form-button {
         padding: 10px;
         max-width: 320px;
@@ -254,19 +274,22 @@ textarea {
     font-size: 30px;
     margin-bottom: 20px; }
 
-.facultie__table {
+.table {
   border-collapse: collapse;
   table-layout: auto; }
-  .facultie__table thead tr {
+  .table thead tr {
     font-weight: bold;
     border-top: 1px solid #e8e9eb; }
-  .facultie__table tr {
+  .table tr {
     height: 100%;
     border-bottom: 1px solid #e8e9eb; }
-    .facultie__table tr .facultie__title {
+    .table tr .facultie__title {
       vertical-align: baseline; }
-  .facultie__table td {
+  .table td {
     padding: 12px 16px; }
+
+.organisation__table {
+  width: 100%; }
 
 .specialities__table {
   border-collapse: collapse;

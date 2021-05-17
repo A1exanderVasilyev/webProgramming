@@ -59,7 +59,5 @@ function getList() {
         $namesList[] = $names;
     }
   
-    return $namesList;
-    
-    
+    return $namesList;  
 }
